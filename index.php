@@ -19,6 +19,9 @@ $clean = array();
 $now_date = null;
 $success_message = null;
 $message_array = array();
+$mysqli = null;
+$res = null;
+$sql = null;
 
 session_start();//セッションスタート
 

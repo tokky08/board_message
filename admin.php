@@ -61,6 +61,7 @@ if(!empty($_GET["message_id"])){
     if($mysqli->connect_errno){
         $error_message[] = "データベースの接続に失敗しました。 エラー番号 ".$mysqli->connect_errno." : ".$mysqli->connect_error; 
     }else{
+        $mysqli->set_charset('utf8');
         $sql = "SELECT * FROM message WHERE id = $message_id";
         $res = $mysqli->query($sql);
         if($res){
@@ -93,6 +94,7 @@ if(!empty($_POST["message_id"])){
             if($mysqli->connect_errno){
                 $error_message[] = "データベースの接続に失敗しました。";
             }else{
+                $mysqli->set_charset('utf8');
                 $sql = "UPDATE message set view_name = '$message_data[view_name]', message = '$message_data[message]' WHERE id = $message_id";
                 $res = $mysqli->query($sql);
             }
@@ -109,6 +111,7 @@ if(!empty($_POST["message_id"])){
         if($mysqli->connect_errno){
             $error_message[] = "データベースの接続に失敗しました。 エラー番号 " . $mysqli->connect_errno . " : " .$mysqli->connect_error;
         }else{
+            $mysqli->set_charset('utf8');
             $sql = "DELETE FROM message WHERE id = $message_id";
             $res = $mysqli->query($sql);
         }

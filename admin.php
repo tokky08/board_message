@@ -1,9 +1,16 @@
 <?php 
 
+/*DockerでのDB情報
 define("DB_HOST","fbf818555993");
 define("DB_USER","root");
 define("DB_PASS","pass");
 define("DB_NAME","board");
+*/
+
+define("DB_HOST","us-cdbr-iron-east-04.cleardb.net");
+define("DB_USER","bbbd77314bda7d");
+define("DB_PASS","e1a24f0f");
+define("DB_NAME","heroku_19e0e083d404b8b");
 
 define("PASSWORD","password");
 
